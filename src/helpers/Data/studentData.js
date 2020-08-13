@@ -130,17 +130,23 @@ const students = [
 const getStudents = () => students;
 
 const livingStudents = () => {
-  if (students.isDead === false) {
-    return students;
-  }
-  return livingStudents;
+  const liveStudent = [];
+  students.forEach((student) => {
+    if (!student.isDead) {
+      liveStudent.push(student);
+    }
+  });
+  return liveStudent;
 };
 
 const dearlyBeloved = () => {
-  if (students.isDead === true) {
-    return students;
-  }
-  return dearlyBeloved;
+  const deadPeoples = [];
+  students.forEach((student) => {
+    if (student.isDead) {
+      deadPeoples.push(student);
+    }
+  });
+  return deadPeoples;
 };
 
 const followTheLight = (studentId) => {
