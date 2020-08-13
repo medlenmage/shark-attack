@@ -1,126 +1,126 @@
 const students = [
   {
-    id: 'student1',
+    id: 1,
     firstName: 'Austin',
     lastName: 'Phy',
     isDead: false,
   },
   {
-    id: 'student2',
+    id: 2,
     firstName: 'Brooke',
     lastName: 'Nemchak',
     isDead: false,
   },
   {
-    id: 'student3',
+    id: 3,
     firstName: 'Gene',
     lastName: 'McNew',
     isDead: false,
   },
   {
-    id: 'student4',
+    id: 4,
     firstName: 'Gwynne',
     lastName: 'Meeks',
     isDead: false,
   },
   {
-    id: 'student5',
+    id: 5,
     firstName: 'Jeanine',
     lastName: 'Beckle',
     isDead: false,
   },
   {
-    id: 'student6',
+    id: 6,
     firstName: 'Jeremiah',
     lastName: 'Vasquez',
     isDead: false,
   },
   {
-    id: 'student7',
+    id: 7,
     firstName: 'Jim',
     lastName: 'Browning',
     isDead: false,
   },
   {
-    id: 'student8',
+    id: 8,
     firstName: 'Jonathan',
     lastName: 'Shearon',
     isDead: false,
   },
   {
-    id: 'student9',
+    id: 9,
     firstName: 'Joshua',
     lastName: 'Medlen',
     isDead: false,
   },
   {
-    id: 'student10',
+    id: 10,
     firstName: 'Kamiran',
     lastName: 'Ibrahim',
     isDead: false,
   },
   {
-    id: 'student11',
+    id: 11,
     firstName: 'Mark',
     lastName: 'Young',
     isDead: false,
   },
   {
-    id: 'student12',
+    id: 12,
     firstName: 'Matt',
     lastName: 'Logan',
     isDead: false,
   },
   {
-    id: 'student13',
+    id: 13,
     firstName: 'Michael',
     lastName: 'Dotson',
     isDead: false,
   },
   {
-    id: 'student14',
+    id: 14,
     firstName: 'Nate',
     lastName: 'Owens',
     isDead: false,
   },
   {
-    id: 'student15',
+    id: 15,
     firstName: 'Nick',
     lastName: 'Walters',
     isDead: false,
   },
   {
-    id: 'student16',
+    id: 16,
     firstName: 'Nikhil',
     lastName: 'Gaikwad',
     isDead: false,
   },
   {
-    id: 'student17',
+    id: 17,
     firstName: 'Ola',
     lastName: 'Oladinni',
     isDead: false,
   },
   {
-    id: 'student18',
+    id: 18,
     firstName: 'Pete',
     lastName: 'Stewart',
     isDead: false,
   },
   {
-    id: 'student19',
+    id: 19,
     firstName: 'Phonesalo',
     lastName: 'Sihanorak',
     isDead: false,
   },
   {
-    id: 'student20',
+    id: 20,
     firstName: 'Ryan',
     lastName: 'Bieden',
     isDead: false,
   },
   {
-    id: 'student21',
+    id: 21,
     firstName: 'William',
     lastName: 'Campbell',
     isDead: false,
@@ -150,9 +150,11 @@ const dearlyBeloved = () => {
 };
 
 const followTheLight = (studentId) => {
+  console.error(studentId);
   students.forEach((response) => {
     if (response.id === studentId) {
       students.isDead = true;
+      console.error(students[studentId]);
     }
   });
 };
