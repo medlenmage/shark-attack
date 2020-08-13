@@ -127,17 +127,38 @@ const students = [
   },
 ];
 
+const getStudents = () => students;
+
 const livingStudents = () => {
-  students.isDead = false;
-  return students;
+  const liveStudent = [];
+  students.forEach((student) => {
+    if (!student.isDead) {
+      liveStudent.push(student);
+    }
+  });
+  return liveStudent;
 };
 
 const dearlyBeloved = () => {
-  students.isDead = true;
-  return students;
+  const deadPeoples = [];
+  students.forEach((student) => {
+    if (student.isDead) {
+      deadPeoples.push(student);
+    }
+  });
+  return deadPeoples;
 };
 
-const followTheLight = (id) => {
-  students.isDead = true;
+const followTheLight = (studentId) => {
+  students.forEach((response) => {
+    if (response.id === studentId) {
+      students.isDead = true;
+    }
+  });
 };
-export default { livingStudents, dearlyBeloved, followTheLight };
+export default {
+  getStudents,
+  livingStudents,
+  dearlyBeloved,
+  followTheLight,
+};
