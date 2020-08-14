@@ -17,17 +17,18 @@ class App extends React.Component {
   }
 
   jawsIsComing = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const freshMeat = studentData.livingStudents();
     if (freshMeat.length > 0) {
-      const randomBite = Math.floor(Math.random() * freshMeat.length);
-      const theVictim = freshMeat[randomBite];
-      console.error(theVictim);
-      studentData.followTheLight(theVictim.id);
+      const randomBite = freshMeat[Math.floor(Math.random() * freshMeat.length)];
+      // const tempId = randomBite;
+      // const theVictim = freshMeat
+      // console.error('theVictim', theVictim);
+      studentData.followTheLight(randomBite.id);
       const livingStudents = studentData.livingStudents();
       const dearlyBeloved = studentData.dearlyBeloved();
       this.setState({ livingStudents, dearlyBeloved });
-      console.error(dearlyBeloved);
+      console.error('livingStudents', livingStudents);
     }
     console.error('hello we attackin?');
   }

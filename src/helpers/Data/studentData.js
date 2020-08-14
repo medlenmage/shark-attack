@@ -136,6 +136,7 @@ const livingStudents = () => {
       liveStudent.push(student);
     }
   });
+  console.error('liveStudent', liveStudent);
   return liveStudent;
 };
 
@@ -150,11 +151,11 @@ const dearlyBeloved = () => {
 };
 
 const followTheLight = (studentId) => {
-  console.error(studentId);
+  console.error('studentId', studentId);
   students.forEach((response) => {
     if (response.id === studentId) {
-      students.isDead = true;
-      console.error(students[studentId]);
+      response.isDead = true;
+      console.error('students[index]', students[studentId]);
     }
   });
 };
