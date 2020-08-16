@@ -12,7 +12,7 @@ class Gravestone extends React.Component {
     const { student } = this.props;
 
     return (
-      <div className="card">
+      <div className="card dead-student">
         <div className="card-body">
           <h5 className="card-title">{student.firstName} {student.lastName}</h5>
           <h6>I'm Alive Help!</h6>
